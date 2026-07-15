@@ -2,6 +2,14 @@
 
 Demo educativa de ECDSA (Elliptic Curve Digital Signature Algorithm) implementada desde cero en Python, sin librerías criptográficas externas. Desarrollada para el curso de **Matemáticas Discretas**.
 
+## 🌐 Aplicación desplegada
+
+Accede a la demo directamente en el navegador, sin instalar nada:
+
+**https://jaacmameciji23-firma-digital-ecdsa-app-itfeze.streamlit.app**
+
+---
+
 ## Características
 
 - Aritmética de curvas elípticas sobre Z_p (suma de puntos, multiplicación escalar double-and-add)
@@ -20,26 +28,55 @@ Demo educativa de ECDSA (Elliptic Curve Digital Signature Algorithm) implementad
 | `demo.py` | Interfaz de consola interactiva (menú 0-6) |
 | `app.py` | Aplicación web Streamlit con 4 pestañas y visualizaciones |
 
-## Instalación
+---
+
+## Instalación local
+
+### macOS
 
 ```bash
+# 1. Clona el repositorio
+git clone https://github.com/jaacmameciji23/firma-digital-ecdsa.git
+cd firma-digital-ecdsa
+
+# 2. Crea y activa el entorno virtual
 python3 -m venv .venv
 source .venv/bin/activate
-pip install streamlit matplotlib pandas
-```
 
-## Uso
+# 3. Instala las dependencias
+pip install -r requirements.txt
 
-**Interfaz web:**
-```bash
+# 4. Ejecuta la aplicación web
 streamlit run app.py
 ```
 
-**Consola:**
-```bash
-python3 demo.py
+### Windows
+
+```powershell
+# 1. Clona el repositorio
+git clone https://github.com/jaacmameciji23/firma-digital-ecdsa.git
+cd firma-digital-ecdsa
+
+# 2. Crea y activa el entorno virtual
+python -m venv .venv
+.venv\Scripts\activate
+
+# 3. Instala las dependencias
+pip install -r requirements.txt
+
+# 4. Ejecuta la aplicación web
+streamlit run app.py
 ```
 
-## Curva elegida
+La app se abrirá automáticamente en el navegador   
+Si prefieres la interfaz de consola, ejecuta `python3 demo.py` (macOS) o `python demo.py` (Windows).
 
-Se usa y² ≡ x³ + 4x + 7 **(mod 11)** en lugar de mod 23 porque con p = 23 el orden del grupo |E| = 24 no es primo, lo que impide calcular inversos modulares para todos los nonces posibles y rompe ECDSA. Con p = 11, |E| = 13 (primo) y el algoritmo funciona correctamente para todos los valores.
+---
+
+
+## Integrantes
+
+- Juan Andres Alvarez Cifuentes
+- Nicolas Caucali Junco
+- Gabriel Santiago Velez Gonzales
+- Gracias por visitar nuestro proyecto :)
