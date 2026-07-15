@@ -2,7 +2,7 @@
 
 Demo educativa de ECDSA (Elliptic Curve Digital Signature Algorithm) implementada desde cero en Python, sin librerías criptográficas externas. Desarrollada para el curso de **Matemáticas Discretas**.
 
-## 🌐 Aplicación desplegada
+## Aplicación desplegada
 
 Accede a la demo directamente en el navegador, sin instalar nada:
 
